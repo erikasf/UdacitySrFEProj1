@@ -1,0 +1,89 @@
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+<link rel = "stylesheet" href = "lr.css"/>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src = "https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+
+
+<script src = "lr.js"></script>
+ 
+
+
+</head>
+<body>
+	
+
+	
+<div class = "container">
+	 <h1>Welcome to Your Eventful Life</h1>
+    
+	<form id = "register" method = "post" action = "#" >
+		<fieldset>
+			<legend>Register Here</legend>
+			<div class="form-group">
+				<label class = "control-label"for = "email">Email
+					<input id = "text" type = "email" name = "email" 
+					title = "Please fill out your email address correctly. here let us give you an example: elephant@example.com" 
+					onblur ="validateEmail()" 
+					required />
+				</label>
+				<span id = "emailError" style = "display:none;">Please enter a valid email address formatted like this "example@example.com" , thank you!</span>
+			</div>
+			<div class = "form-group">
+				<label  class = "control-label"for = "password">Password
+					<input type="password" maxlength="12" name="password" title="Please enter your password, between 5 and 12 characters" required minlength="5"
+					onblur = "validatePassword(password)">
+
+				</label>
+				<span id = "passwordError" style = "display:none;"> You must enter in your password</span>
+			</div>
+			
+			<div class = "form-group">
+				<label  class = "control-label"for = "password2">
+					Confirm Password
+					<input type = "password"id = "password2" name = "password2" onblur = "confirmPasswordMatch(password, password2)"/>
+				</label>
+				<span id = "passwordLengthError">Your Password does not have enough characters in it</span>
+			</div>
+			<button type = "submit"class = "btn btn-primary">Submit </button>
+		</fieldset>
+		
+	</form>
+
+
+
+	<div class = "container" id = " signingIn">
+	<h1>Sign in to Your Eventful Life</h1>
+  
+	<form id = "signing" method = "post" action = "" >
+		<fieldset>
+			<legend>Sign In Here</legend>
+			<div class="form-group">
+				<label class = "control-label"for = "email">Email
+					<input id = "text" type = "email" name = "email" 
+					title = "Please fill out your email address correctly. here let us give you an example: elephant@example.com" 
+					onblur ="validateEmail()" 
+					required />
+				</label>
+				<span id = "emailError" style = "display:none;">Please enter a valid email address formatted like this "example@example.com" , thank you!</span>
+			</div>
+			<div class = "form-group">
+				<label  class = "control-label"for = "password">Password
+					<input type="password" maxlength="12" name="password" title="Please enter your password, between 5 and 12 characters" required minlength="5"
+					onblur = "validatePassword(password)">
+
+				</label>
+				<span id = "passwordError" style = "display:none;"> You must enter in your password</span>
+	
+				<span id = "passwordLengthError">Your Password does not have enough characters in it</span>
+			</div>
+			<button type = "submit" id = "signingInSubmit"class = "btn btn-primary">Sign In</button>
+		</fieldset>
+		
+	</form>
+		</div>
