@@ -81,6 +81,7 @@ function check(){
 	//check if stored data from the registeration form is equal to the data from the login form
 	if(userEmail.value == storedEmail && userPassword.value == storedPassword){
 		alert("you are logged in");
+		window.open('index.html')//opens the add event form when everything matches. 
 	} else {
 		alert('something went wrong here, please try logging in again');
 	}
